@@ -1,210 +1,579 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./peschello-catering-logo 2.svg">
-  <link rel="icon" type="image/png" sizes="16x16" href="./peschello-catering-logo 2.svg">
-  <title>Peschello Catering</title>
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="theme-color" content="#eee7d8" />
+  <title>Peschello — An Evening Shaped by Wine</title>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-  <nav>
-   <a href="#" class="brand-logo-link">
-  <img src="./peschello-catering-logo 2.svg" alt="Peschello Catering Logo" class="brand-logo">
+  <!-- ================= HEADER ================= -->
+
+  <header class="site-header">
+
+   <a href="#top" class="brand">
+  <img src="./peschello-catering-logo 2.svg" alt="Peschello">
 </a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#menu">Menu & Prices</a></li>
-      <li><a href="mailto:Peschello.services@gmail.com">Contact</a></li>
-    </ul>
-    <a href="mailto:Peschello.services@gmail.com" class="btn-reserve">Book Service</a>
-  </nav>
 
-  <section class="hero">
-    <span class="hero-tag fade-up">Bespoke Culinary Excellence</span>
-    <h1 class="hero-title fade-up delay-1">Peschello Catering</h1>
-    <p class="hero-subtitle fade-up delay-2">Unforgettable African feast experiences, curated menus, and private culinary services tailored for your special occasions.</p>
-  </section>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Visit</a>
+    </nav>
 
-  <div class="pattern-divider"></div>
+    <button
+      class="menu-toggle"
+      aria-label="Open menu"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+    </button>
 
-  <section class="about-section" id="about">
-    <div class="about-text fade-up">
-      <span class="tagline">Behind The Culinary Craft</span>
-      <h2>Bringing Passion, Flavor & Culture to Your Table</h2>
-      <p>At Peschello Catering, we believe every event is an opportunity to create lasting memories through exceptional food. Rooted in rich African traditions and blended with contemporary culinary artistry, our dishes are crafted with fresh ingredients and authentic spices.</p>
-      <p>Whether you are hosting an intimate family dinner, a lavish celebration, or a corporate gala, we tailor our culinary services to elevate your event with warmth and elegance.</p>
-      <div class="signature">Chef Peschello</div>
-    </div>
-    
-    <div class="about-image-wrapper fade-up delay-1">
-      <img src="./IMG_3008.JPG" alt="Chef Peschello" class="chef-photo">
-    </div>
-  </section>
+  </header>
 
-  <section class="services-section" id="services">
-    <div class="section-header fade-up">
-      <span>What We Offer</span>
-      <h2>OUR CATERING SERVICES</h2>
-    </div>
 
-    <div class="cards-grid">
-      <div class="service-card fade-up">
-        <img src="./IMG_2958.JPG" alt="Private Dining" class="card-img">
-        <div class="card-body">
-          <span class="card-step">Exclusive</span>
-          <h3 class="card-title">Events & Gatherings</h3>
-          <p class="card-desc">Personalized multi-course dining experiences prepared on-site for intimate gatherings and VIP guests.</p>
+  <main id="top">
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero section-frame reveal">
+
+      <img
+        src="./herosection.jpg"
+        alt="Warmly lit fine dining restaurant"
+      />
+
+      <div class="hero-shade"></div>
+
+      <div class="hero-content">
+
+        <p class="eyebrow light">
+          A FINE DINING EXPERIENCE
+        </p>
+
+        <h1>
+          An evening shaped
+          <br>
+          by wine.
+        </h1>
+
+        <a href="#reserve" class="button button-light">
+          Reserve a table
+        </a>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= ABOUT INTRO ================= -->
+
+    <section class="intro page-width reveal" id="about">
+
+      <p class="eyebrow">
+        ABOUT
+      </p>
+
+      <h2>
+        Food, wine & quiet
+        <br>
+        moments worth remembering.
+      </h2>
+
+      <p class="intro-copy">
+        At Peschello Catering, we believe every event is an opportunity to create lasting memories through exceptional food. Rooted in rich African traditions and blended with contemporary culinary artistry, our dishes are crafted with fresh ingredients and authentic spices.
+      </p>
+
+    </section>
+
+
+
+    <!-- ================= ABOUT COLLAGE ================= -->
+
+    <section class="about-composition page-width reveal">
+
+      <div class="image image-large">
+        <img
+          src="./IMG_0089.JPG"
+          alt="Chef in the kitchen"
+        />
+      </div>
+
+      <div class="image image-small">
+        <img
+          src="./IMG_2958.JPG"
+          alt="Wine beside a dining table"
+        />
+      </div>
+
+      <div class="image image-detail">
+        <img
+          src="./IMG_9277_Original.JPG"
+          alt="Wine bottle"
+        />
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= ABOUT COPY ================= -->
+
+    <section class="split-copy page-width reveal">
+
+      <div></div>
+
+      <div>
+
+        <p>
+          Chef-led and deeply seasonal, Peschello explores
+          the relationship between the plate and the glass.
+          Our menu changes with the market, while the room
+          stays warm, understated and unhurried.
+        </p>
+
+        <a href="#menu" class="text-link">
+          Learn more about Peschello
+          <span>↗</span>
+        </a>
+
+      </div>
+
+    </section>
+
+
+
+   
+
+
+
+    <!-- ================= GALLERY ================= -->
+
+    <section class="gallery page-width reveal" id="gallery">
+
+      <div class="gallery-top">
+
+        <div>
+
+          <p class="eyebrow">
+            THE ROOM & THE TABLE
+          </p>
+
+          <h2>
+            A gallery of the
+            <br>
+            Peschello evening.
+          </h2>
+
         </div>
-      </div>
 
-      <div class="service-card fade-up delay-1">
-        <img src="./IMG_0021.JPG" alt="Event Catering" class="card-img">
-        <div class="card-body">
-          <span class="card-step">Celebrations</span>
-          <h3 class="card-title">Wedding Catering & Birthdays</h3>
-          <p class="card-desc">Full-service feast catering featuring signature African dishes designed for large events and weddings.</p>
+
+        <div class="gallery-controls">
+
+          <button
+            class="gallery-btn prev"
+            aria-label="Previous image"
+          >
+            ←
+          </button>
+
+          <button
+            class="gallery-btn next"
+            aria-label="Next image"
+          >
+            →
+          </button>
+
         </div>
+
       </div>
 
-      <div class="service-card fade-up delay-2">
-        <img src="./IMG_9277_Original.JPG" alt="Custom Buffet" class="card-img">
-        <div class="card-body">
-          <span class="card-step">Tailored</span>
-          <h3 class="card-title">Custom Buffet Setups</h3>
-          <p class="card-desc">Beautifully styled buffet spreads that blend visual elegance with rich, vibrant flavors.</p>
+
+      <div class="slider">
+
+        <div class="slides">
+
+          <figure class="slide active">
+
+            <img
+              src="./IMG_0021.JPG"
+              alt="Peschello dining room"
+            />
+
+          </figure>
+
+
+          <figure class="slide">
+
+            <img
+              src="./IMG_9514_Original.JPG"
+              alt="Tasting course"
+            />
+
+          </figure>
+
+
+          <figure class="slide">
+
+            <img
+              src="./IMG_2947.JPG"
+              alt="Chef's dish"
+            />
+
+          </figure>
+
+
+          <figure class="slide">
+
+            <img
+              src="./IMG_0089.JPG"
+              alt="Wine service"
+            />
+
+          </figure>
+
         </div>
-      </div>
-    </div>
-  </section>
 
 
-    <section class="showcase-section" id="gallery">
-    
-    <div class="showcase-header fade-up">
-      <span class="section-tag">An Epitome of Culinary Artistry</span>
-      <h2 class="script-title">Sophistication</h2>
-      <p class="showcase-desc">A visual journey through authentic flavors, exquisite plating, and contemporary African dining experiences prepared for our distinguished guests.</p>
-    </div>
+        <div class="slider-meta">
 
-    <div class="marquee-wrapper fade-up delay-1">
-      <div class="marquee-track">
-        
-        <div class="gallery-card"><img src="./food1.jpg" alt="Peschello Dish 1"></div>
-        <div class="gallery-card"><img src="food2.jpg" alt="Peschello Dish 2"></div>
-        <div class="gallery-card card-tall"><img src="./food3.jpg" alt="Peschello Dish 3"></div>
-        <div class="gallery-card"><img src="./food4.jpg" alt="Peschello Dish 4"></div>
-        <div class="gallery-card"><img src="./food5.jpg" alt="Peschello Dish 5"></div>
-        <div class="gallery-card card-tall"><img src="./food6.jpg" alt="Peschello Dish 6"></div>
+          <span class="counter">
+            01 / 04
+          </span>
 
-        <div class="gallery-card" aria-hidden="true"><img src="./food7.jpg" alt="Peschello Dish 1"></div>
-        <div class="gallery-card" aria-hidden="true"><img src="./food8.jpg" alt="Peschello Dish 2"></div>
-        <div class="gallery-card card-tall" aria-hidden="true"><img src="./food9.jpg" alt="Peschello Dish 3"></div>
-        <div class="gallery-card" aria-hidden="true"><img src="food10.jpg" alt="Peschello Dish 4"></div>
-        <div class="gallery-card" aria-hidden="true"><img src="food11.jpg" alt="Peschello Dish 5"></div>
-        <div class="gallery-card card-tall" aria-hidden="true"><img src="food12.jpg" alt="Peschello Dish 6"></div>
-
-         <div class="gallery-card" aria-hidden="true"><img src="./food13.jpg" alt="Peschello Dish 1"></div>
-        <div class="gallery-card" aria-hidden="true"><img src="./food14.jpg" alt="Peschello Dish 2"></div>
-        <div class="gallery-card card-tall" aria-hidden="true"><img src="./food15.jpg" alt="Peschello Dish 3"></div>
-        <div class="gallery-card" aria-hidden="true"><img src="food16.jpg" alt="Peschello Dish 4"></div>
-        <div class="gallery-card" aria-hidden="true"><img src="food17.jpg" alt="Peschello Dish 5"></div>
-        <div class="gallery-card card-tall" aria-hidden="true"><img src="food18.jpg" alt="Peschello Dish 6"></div>
-
-
-      </div>
-    </div>
-
-  </section>
-
-
-
-<section class="menu-section" id="menu">
-    <div class="menu-container">
-      
-      <div class="menu-intro fade-up">
-        <span class="section-tag">Curated Offerings</span>
-        <h2>FOOD MENU & PRICING</h2>
-        <p>Each order is prepared with precision and flexibility across scale and finish. From intimate family feasts to grand celebrations, explore our half-tray and full-tray pricing packages.</p>
-        <a href="#contact" class="btn-reserve" style="margin-top: 2rem; display: inline-block;">Request Custom Quote</a>
-      </div>
-
-      <div class="menu-image-frame fade-up delay-1">
-        <img src="./Black Yellow Restaurant Food Menu.PNG" alt="Peschello Catering Menu and Pricing" class="menu-flyer-img">
-      </div>
-
-    </div>
-  </section>
-
-  <section class="menu-section" id="menu">
-    <div class="menu-container">
-      
-     <div class="menu-intro fade-up">
-  <span class="section-tag">Curated Offerings</span>
-  <h2>TAILORED MENUS & PRICING</h2>
-  <p>Every event is a bespoke culinary production. From intimate dinner parties to grand cultural celebrations, we craft custom dining packages tailored to your guest count, preferred flavor profiles, and event style.</p>
-  <a href="#contact" class="btn-reserve" style="margin-top: 2rem; display: inline-block;">Request Custom Quote</a>
-</div>
-
-      <div class="menu-carousel-wrapper fade-up delay-1">
-        <div class="carousel-container">
-          <div class="carousel-slide active">
-            <img src="./IMG_9514_Original.JPG" alt="Peschello Catering Menu - Page 1">
+          <div class="progress">
+            <span></span>
           </div>
-          <div class="carousel-slide">
-            <img src="./IMG_2958.JPG" alt="Peschello Catering Menu - Page 2">
-          </div>
-          <div class="carousel-slide">
-            <img src="./IMG_2947.JPG" alt="Peschello Catering Menu - Page 3">
-          </div>
+
+          <span class="caption">
+            The dining room
+          </span>
+
         </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= WHAT WE DO ================= -->
+
+<section class="what-we-do page-width reveal">
+
+  <div class="what-we-do-heading">
+
+    <div>
+      <p class="eyebrow">
+        EVENTS & GATHERINGS
+      </p>
+
+      <h2>
+        More than<br>
+        a dinner.
+      </h2>
+    </div>
+
+    <p class="what-we-do-intro">
+      Personalized multi-course dining experiences prepared on-site for intimate gatherings and VIP guests.
+    </p>
+
+  </div>
+
+
+  <div class="service-grid">
+
+
+    <!-- CARD 01 -->
+
+    <article class="service-card">
+
+      <div class="service-image">
+
+        <img
+          src="./IMG_0021.JPG"
+          alt="Curated wine selection"
+        />
+
+        <span class="service-number">
+          01
+        </span>
+
+      </div>
+
+      <div class="service-content">
+
+        <h3>
+          EVENTS & GATHERINGS
+        </h3>
+
+        <p>
+          Personalized multi-course dining experiences prepared on-site for intimate gatherings and VIP guests.
+        </p>
+
+        <a href="#menu" class="service-link">
+          Explore our cellar
+          <span>↗</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- CARD 02 -->
+
+    <article class="service-card">
+
+      <div class="service-image">
+
+        <img
+          src="./IMG_2947.JPG"
+          alt="Chef preparing a tasting course"
+        />
+
+        <span class="service-number">
+          02
+        </span>
+
+      </div>
+
+      <div class="service-content">
+
+        <h3>
+          WEDDING CATERING & BIRTHDAYS
+        </h3>
+
+        <p>
+          Personalized multi-course dining experiences prepared on-site for intimate gatherings and VIP guests.
+        </p>
+
+        <a href="#menu" class="service-link">
+          View the menu
+          <span>↗</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- CARD 03 -->
+
+    <article class="service-card">
+
+      <div class="service-image">
+
+        <img
+          src="./IMG_2958.JPG"
+          alt="Elegant restaurant interior"
+        />
+
+        <span class="service-number">
+          03
+        </span>
+
+      </div>
+
+      <div class="service-content">
+
+        <h3>
+          CUSTOM BUFFET SETUPS
+        </h3>
+
+        <p>
+          Beautifully styled buffet spreads that blend visual elegance with rich, vibrant flavors.
+        </p>
+
+        <a href="#reserve" class="service-link">
+          Make a booking
+          <span>↗</span>
+        </a>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+
+   
+    <!-- ================= DINNER MENU ================= -->
+
+    <section class="dinner page-width reveal">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          Peschello Catering
+        </p>
+
+        <h2>
+          Our menu.
+        </h2>
+
+      </div>
+
+
+      <div class="dinner-grid">
+
+        <img
+          src="./Black Yellow Restaurant Food Menu.PNG"
+          alt="Fine dining table"
+        />
+
+
+        <div class="course-list">
+
+
+
+          <div>
+
+            <span>FOOD MENU & PRICING</span>
+
+            <p>
+              Each order is prepared with precision and flexibility across scale and finish. From intimate family feasts to grand celebrations, explore our half-tray and full-tray pricing packages.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= RESERVATION ================= -->
+
+    <section class="reserve section-frame reveal" id="reserve">
+
+      <img
+        src="./IMG_2958.JPG"
+        alt="Peschello restaurant interior"
+      />
+
+      <div class="hero-shade"></div>
+
+
+      <div class="reserve-content">
+
+        <p class="eyebrow light">
+          YOUR TABLE AWAITS
+        </p>
+
+        <h2>
+          Make an evening
+          <br>
+          of it.
+        </h2>
+
+        <a
+          href="mailto:reservations@Peschello.example"
+          class="button button-light"
+        >
+          Reserve a table
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="footer page-width" id="contact">
+
+    <div class="footer-brand">
+      PESCHELLO
+    </div>
+
+
+    <div class="footer-cols">
+
+      <div>
+
+        <span>VISIT</span>
+
+        <p>
+          18 Mercer Street
+          <br>
+          Arizona, USA
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <span>HOURS</span>
+
+        <p>
+          Tuesday — Saturday
+          <br>
+          5:30 — 11:00 PM
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <span>FOLLOW</span>
+
+        <p>
+          <a href="#">Instagram</a>
+          <br>
+          <a href="#">Journal</a>
+        </p>
+
       </div>
 
     </div>
-  </section>
 
 
+    <div class="footer-bottom">
 
+      <span>
+        © 2026 Peschello
+      </span>
 
+      <span>
+        Crafted for slow evenings.
+      </span>
 
-  <footer id="contact" class="fade-up">
-    <h2 class="footer-title">Reserve Peschello Catering</h2>
-    <p class="footer-sub">Contact us today to discuss your custom menu and lock in your event date.</p>
-    
-    <div class="footer-actions">
-      <a href="mailto:Peschello.services@gmail.com" class="btn-reserve">Inquire For Availability</a>
     </div>
 
-    <div class="footer-links">
-      <a href="https://www.instagram.com/peschellokitchen" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-        </svg>
-        <span>@peschellokitchen</span>
-      </a>
-
-      <a href="mailto:Peschello.services@gmail.com" class="social-link" aria-label="Email">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-          <polyline points="22,6 12,13 2,6"></polyline>
-        </svg>
-        <span>Peschello.services@gmail.com</span>
-      </a>
-    </div>
-
-    <p class="copyright">&copy; 2026 Peschello Catering. All Rights Reserved.</p>
   </footer>
 
+
   <script src="script.js"></script>
+
 </body>
 </html>
