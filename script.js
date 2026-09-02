@@ -1,69 +1,97 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.15
-  };
 
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-        observer.unobserve(entry.target); // Triggers animation once when scrolled into view
+  /* =========================================
+     SCROLL REVEAL ANIMATIONS
+  ========================================= */
+
+  const fadeElements = document.querySelectorAll(".fade-up");
+
+  if (fadeElements.length) {
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          entry.target.classList.add("active");
+          observer.unobserve(entry.target);
+        });
+      },
+      {
+        root: null,
+        rootMargin: "0px 0px -40px 0px",
+        threshold: 0.1
       }
+    );
+
+    fadeElements.forEach((element) => {
+      observer.observe(element);
     });
-  }, observerOptions);
-
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-});
-
-
-// AUTOMATED MENU SLIDESHOW
-document.addEventListener("DOMContentLoaded", () => {
-  const slides = document.querySelectorAll('.carousel-slide');
-  if (!slides.length) return;
-
-  let currentIndex = 0;
-  const slideInterval = 4000; // Time per slide in milliseconds (4 seconds)
-
-  function autoRotateSlides() {
-    slides[currentIndex].classList.remove('active');
-    currentIndex = (currentIndex + 1) % slides.length;
-    slides[currentIndex].classList.add('active');
   }
 
-  // Start continuous infinite loop
-  setInterval(autoRotateSlides, slideInterval);
-});
 
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+  /* =========================================
+     MENU SLIDESHOW
+  ========================================= */
 
-if (menuToggle && navLinks) {
+  const slides = document.querySelectorAll(".carousel-slide");
 
-  menuToggle.addEventListener("click", () => {
+  if (slides.length > 1) {
+    let currentIndex = 0;
+    let slideTimer;
 
-    const isOpen =
-      navLinks.classList.toggle("active");
+    const changeSlide = () => {
+      slides[currentIndex].classList.remove("active");
 
-    menuToggle.classList.toggle(
-      "active",
-      isOpen
-    );
+      currentIndex = (currentIndex + 1) % slides.length;
 
-    menuToggle.setAttribute(
-      "aria-expanded",
-      isOpen
-    );
-  });
+      slides[currentIndex].classList.add("active");
+    };
+
+    const startSlideshow = () => {
+      slideTimer = setInterval(changeSlide, 5000);
+    };
+
+    const stopSlideshow = () => {
+      clearInterval(slideTimer);
+    };
+
+    startSlideshow();
+
+    // Pause slideshow when the page/tab isn't visible
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) {
+        stopSlideshow();
+      } else {
+        startSlideshow();
+      }
+    });
+  }
 
 
-  // Close menu when a link is clicked
+  /* =========================================
+     MOBILE NAVIGATION
+  ========================================= */
 
-  navLinks
-    .querySelectorAll("a")
-    .forEach((link) => {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
 
+  if (menuToggle && navLinks) {
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("active");
+
+      menuToggle.classList.toggle("active", isOpen);
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+    });
+
+
+    // Close menu after clicking a link
+
+    navLinks.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
 
         navLinks.classList.remove("active");
@@ -76,7 +104,8 @@ if (menuToggle && navLinks) {
         );
 
       });
-
     });
 
-}
+  }
+
+});
