@@ -42,7 +42,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
   font-size: 16px;
   overflow-x: hidden;
 }
@@ -270,9 +270,10 @@ nav {
   align-items: center;
   justify-content: center;
 
-  min-height: 40px;
+  min-height: 0;
+  height: auto;
 
-  padding: 0 18px;
+  padding: 12px 18px;
 
   border: 1px solid var(--terracotta);
 
@@ -283,11 +284,17 @@ nav {
   text-decoration: none;
 
   font-size: 9px;
+  font-weight: 400;
+
+  line-height: 1.2;
+
   letter-spacing: 0.15em;
 
   text-transform: uppercase;
 
   white-space: nowrap;
+
+  box-sizing: border-box;
 
   transition:
     background 0.3s ease,
@@ -302,7 +309,6 @@ nav {
 
   transform: translateY(-2px);
 }
-
 
 /* Mobile menu button */
 
@@ -551,40 +557,61 @@ nav {
 
 /* Quote button */
 
-.btn-quote {
-  display: inline-flex;
+/* FINAL QUOTE BUTTON */
+a.btn-quote {
+  display: flex !important;
 
-  align-items: center;
-  justify-content: center;
+  align-items: center !important;
+  justify-content: center !important;
 
-  padding: 12px 26px;
+  position: relative !important;
 
-  border: 1px solid var(--terracotta);
+  width: fit-content !important;
+  max-width: 100% !important;
 
-  background: transparent;
+  height: auto !important;
+  min-height: 0 !important;
 
-  color: var(--text);
+  margin: 0 !important;
 
-  font-size: 9px;
+  padding: 16px 28px !important;
 
-  letter-spacing: 0.18em;
+  border: 1px solid var(--terracotta) !important;
 
-  text-transform: uppercase;
+  background: transparent !important;
 
-  text-decoration: none;
+  color: var(--text) !important;
 
-  white-space: nowrap;
+  font-family: var(--sans) !important;
+  font-size: 9px !important;
+  font-weight: 400 !important;
+
+  line-height: 1 !important;
+
+  letter-spacing: 0.18em !important;
+
+  text-align: center !important;
+  text-transform: uppercase !important;
+
+  text-decoration: none !important;
+
+  white-space: nowrap !important;
+
+  box-sizing: border-box !important;
+
+  transform: none;
 
   transition:
     background 0.3s ease,
-    color 0.3s ease;
+    color 0.3s ease,
+    border-color 0.3s ease;
 }
 
-.btn-quote:hover {
-  background: var(--terracotta);
-  color: #fff;
+a.btn-quote:hover {
+  background: var(--terracotta) !important;
+  border-color: var(--terracotta) !important;
+  color: #fff !important;
 }
-
 
 /* =========================================================
    DIVIDER
