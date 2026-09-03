@@ -42,9 +42,14 @@
 }
 
 html {
-  scroll-behavior: smooth !important;
+  scroll-behavior: smooth;
   font-size: 16px;
-  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -67,6 +72,8 @@ body {
   line-height: 1.6;
 
   overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior-y: auto;
 
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -364,6 +371,7 @@ nav {
 
   width: 100%;
   min-height: 100svh;
+  height: auto;
 
   padding: 120px 40px 80px;
 
@@ -1673,13 +1681,10 @@ footer {
   /* ---------------- HERO ---------------- */
 
   .hero {
-    min-height: 100svh;
-
-    padding:
-      100px
-      24px
-      60px;
-  }
+  min-height: 100svh;
+  height: auto;
+  padding: 100px 24px 60px;
+}
 
   .hero-tag {
     margin-bottom: 18px;
@@ -1982,21 +1987,14 @@ footer {
 
   /* HERO */
 
+  @media (max-width: 480px) {
   .hero {
     min-height: 100svh;
-
-    padding:
-      90px
-      18px
-      50px;
-
-    /*
-      Adjust this percentage if you want
-      a different crop of food5.jpg.
-    */
-    background-position:
-      58% center;
+    height: auto;
+    padding: 90px 18px 50px;
+    background-position: 58% center;
   }
+}
 
   .hero-tag {
     max-width: 280px;
@@ -2142,5 +2140,28 @@ footer {
     transform: none;
 
     will-change: auto;
+  }
+}
+
+/* =========================================================
+   MOBILE SCROLL FIX
+========================================================= */
+
+@media (max-width: 768px) {
+
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior-y: auto;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 100svh;
+    overflow: hidden;
   }
 }
