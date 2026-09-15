@@ -183,6 +183,13 @@ nav {
   border-bottom: 1px solid rgba(212, 163, 89, 0.12);
 }
 
+.hero-title {
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+}
+.hero-title {
+  font-family: "Allura", cursive;
+  font-weight: 400;
+}
 
 /* Logo */
 
