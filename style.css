@@ -468,7 +468,8 @@ nav {
 
   color: var(--text);
 
-  font-family: var(--serif);
+  font-family: "Allura", cursive;
+  font-weight: 400;
 
   font-size: clamp(
     4rem,
