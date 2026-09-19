@@ -766,6 +766,43 @@ a.btn-quote:hover {
     rgba(200, 90, 50, 0.14);
 }
 
+@media (max-width: 768px) {
+  .about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .about-text {
+    display: contents;
+  }
+
+  .about-text .tagline {
+    order: 1;
+  }
+
+  .about-text h2 {
+    order: 2;
+  }
+
+  .about-text p {
+    order: 3;
+  }
+
+  .about-image-wrapper {
+    order: 4;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .thechef {
+    order: 5;
+    width: 100%;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+  }
+}
 
 /* =========================================================
    SERVICES / WHAT WE DO
