@@ -2071,6 +2071,110 @@ footer {
   }
 }
 
+/* =========================
+   TABLET / MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .about-text {
+    display: contents;
+  }
+
+  .about-text .tagline {
+    order: 1;
+  }
+
+  .about-text h2 {
+    order: 2;
+  }
+
+  .about-text p {
+    order: 3;
+  }
+
+  .about-image-wrapper {
+    order: 4;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .thechef {
+    order: 5;
+    width: 100%;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .chef-photo {
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+}
+
+
+/* =========================
+   SMALL PHONES — 480px
+========================= */
+
+@media (max-width: 480px) {
+  .about-section {
+    width: min(
+      var(--container),
+      calc(100% - (var(--side-padding) * 2))
+    );
+
+    padding-block: 4.5rem;
+  }
+
+  .about-text .tagline {
+    margin-bottom: 0.6rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+  }
+
+  .about-text h2 {
+    margin-bottom: 1.2rem;
+
+    font-size: 2.2rem;
+    line-height: 1.05;
+  }
+
+  .about-text p {
+    margin-bottom: 0.9rem;
+
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+
+  .about-image-wrapper {
+    margin-top: 1.25rem;
+  }
+
+  .chef-photo {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+
+    box-shadow:
+      8px 8px 0
+      rgba(200, 90, 50, 0.14);
+  }
+
+  .thechef {
+    margin-top: 1.25rem;
+    font-size: 1.7rem;
+  }
+}
+
 
 /* =========================================================
    VERY SMALL DEVICES — 360px
