@@ -1765,43 +1765,7 @@ footer {
   }
 
 
-  /* ---------------- ABOUT ---------------- */
-
-  .about-section {
-    width: calc(100% - 40px);
-
-    padding-block: 5rem;
-
-    gap: 2.5rem;
-  }
-
-  .about-text .tagline {
-    font-size: 0.58rem;
-  }
-
-  .about-text h2 {
-    margin-bottom: 1.2rem;
-
-    font-size:
-      clamp(
-        2.4rem,
-        12vw,
-        3.5rem
-      );
-  }
-
-  .about-text p {
-    font-size: 0.72rem;
-
-    line-height: 1.85;
-  }
-
-  .chef-photo {
-    height: 105vw;
-
-    max-height: 500px;
-  }
-
+  
 
   /* ---------------- SERVICES ---------------- */
 
